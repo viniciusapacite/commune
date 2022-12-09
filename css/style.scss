@@ -1,0 +1,266 @@
+
+
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Nunito Sans', sans-serif;}
+
+html, body { height: 100vh; width: 100%; background-color: #F6F9FE; font-family: 'Nunito Sans', sans-serif;}
+
+.clear {
+    clear: both;
+}
+
+
+@mixin alignDiv {
+    max-width: 1100px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 2%;
+   
+}
+
+div.center {
+    @include alignDiv();
+}
+
+div.logo {
+    float: left;
+    padding-top: 45px;
+    cursor: pointer;
+}
+
+.nav_bar {
+    text-align: center;
+    float: right;
+    
+    margin-top: 40px;
+    
+
+    a {
+        padding: 10px 15px;
+        color: #5c5c5cb5;
+        font-weight: 500;
+        font-family:'Nunito Sans', sans-serif;
+        text-decoration: none;
+    }
+
+    button {
+        border: none;
+        border-radius: 4px;
+        padding: 15px 20px;
+        background-color: #372865;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+//acabou o navbar
+
+div.mainContent {
+    float: left;
+    width: 60%;
+    margin-top: 10rem;
+
+    .alignH5 {
+        background-color: #372865;
+        max-width: 400px;
+        padding:3px 15px;
+        border-radius: 30px;
+        margin-bottom: 15px;
+
+        p {
+            color: #B7ACD3;
+            font-size: 13px;
+            letter-spacing: 0.3px;
+            margin-bottom: 4px;
+            
+            a {
+                color: #CCC1E6;     
+            }        
+        }
+    }
+
+    //cabou alignh5
+
+    h1 {
+        max-width: 100%;
+        color: #353252;
+        font-size: 40px;
+        font-weight: 600;
+        font-family:'Nunito Sans', sans-serif;
+    }
+
+    p {
+        font-size: 14px;
+        color: #5c5c5c8a;
+        font-weight: 600;
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    input {
+        margin-top: 15px;
+    }
+
+    input[type=text]{
+        border: 1px solid #bebfc2c3;
+        border-radius: 4px;
+        padding: 15px;
+        width: 300px;
+        color: #5c5c5cb1;
+        outline: none;
+    }
+
+    input[type=text]::placeholder {
+        color: #BEBFC2;
+    }
+
+    input[type=submit]{
+        border: none;
+        padding: 15px 25px;
+        border-radius:4px;
+        background-color: #372865;
+        color: rgba(255, 255, 255, 0.966);
+        cursor: pointer;
+        margin-left: 10px;
+        font-weight: 600;
+    }
+}
+
+//acabou input
+
+div.mainImg {
+    float: right;
+    width: 40%;
+
+   img {
+        max-width: 100%;
+        width: 80%;
+        padding-top: 7rem;
+        float: right;
+   }
+}
+
+.companies {
+    margin-top: 3rem;
+
+    span {
+        color: #5C5C5C;
+        font-weight: 700;
+    }
+}
+
+.iconImg {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+    img {
+        max-width: 100%;
+        width: 40px;
+        
+    }
+}
+
+//media screen de 500px a 768px
+
+@media screen and (min-width:300px) and (max-width:768px){
+    div.center {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 5%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    div.logo {
+        margin-bottom: 2rem;
+    }
+
+    div.mainContent .alignH5 {
+        width: 100%;
+        margin: 20px auto;
+        display: block;
+    }
+
+    div.mainContent h1 {
+        font-size: 30px;
+        width: 60%;
+        text-align: center;
+        margin: 10px auto;
+        font-weight:800;
+    }
+
+    div.mainContent p {
+        width: 80%;
+        margin: 5px auto;
+    }
+
+    .nav_bar {
+        display: none;
+    }
+
+    div.mainContent {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .mainImg > img{
+        display: none;
+    }
+
+    
+    div.mainContent input[type=text],
+    div.mainContent input[type=submit]{
+        width: 90%;
+        margin: 10px auto;
+        font-size: 16px;
+    }
+    div.mainContent input[type=submit]{
+        color: rgba(255, 255, 255, 0.875);
+    }
+    
+    
+    .companies {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width:1024px) {
+
+    div.logo {
+        margin-left: 10rem;
+    }
+
+    div.center {
+    width: 100%;
+    text-align: center;
+    }
+    .nav_bar{
+    display: none;
+}
+    .mainImg {
+        display: none;
+    }
+
+    div.mainContent .alignH5 {
+      margin: 20px auto;
+    }
+    div.mainContent {
+        margin: 4rem auto;
+        float: none;
+        text-align: center;
+    }
+
+    .companies {
+        text-align: left;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+}
