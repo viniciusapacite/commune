@@ -169,6 +169,7 @@ div.mainImg {
 //media screen de 500px a 768px
 
 @media screen and (min-width:300px) and (max-width:768px){
+    
     div.center {
         max-width: 100%;
         width: 100%;
@@ -232,10 +233,7 @@ div.mainImg {
 }
 
 @media screen and (max-width:1024px) {
-
-    div.logo {
-        margin-left: 10rem;
-    }
+ 
 
     div.center {
     width: 100%;
